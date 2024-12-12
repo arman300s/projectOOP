@@ -1,39 +1,26 @@
 package projectA;
 
 
+import java.util.List;
+
 /**
  * @generated
  */
-public class Manager {
-
-    /**
-     * @generated
-     */
+public class Manager extends Employee {
     private ManagerType managerType;
-
-
-    /**
-     * @generated
-     */
     private Course course;
-
-
-    /**
-     * @generated
-     */
-    private ManagerType getManagerType() {
-        return this.managerType;
+    private List<String> responsibilities;
+    public Manager(String id, String name, String email, String password, String role, String employeeId, String department, double salary, List<String> responsibilities) {
+        super(id, name, email, password, role, employeeId, department, salary);
+        this.responsibilities = responsibilities;
     }
 
-    /**
-     * @generated
-     */
-    private ManagerType setManagerType(ManagerType managerType) {
-        this.managerType = managerType;
+    public void assignTask(Employee employee, String task) {
+        System.out.println("Assigned task: " + task + " to " + employee.getName());
     }
 
-
-    //                          Operations
-
+    public void evaluatePerformance(Employee employee) {
+        System.out.println("Evaluating performance of " + employee.getName());
+    }
 
 }

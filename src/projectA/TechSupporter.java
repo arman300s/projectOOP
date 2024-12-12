@@ -1,41 +1,32 @@
 package projectA;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @generated
  */
-public class TechSupporter {
+public class TechSupporter extends Employee {
 
-    /**
-     * @generated
-     */
     private List<Order> assignedOrders;
-
-
-    /**
-     * @generated
-     */
     private Order order;
-
-
-    /**
-     * @generated
-     */
-    private List<Order> getAssignedOrders() {
-        return this.assignedOrders;
+    public TechSupporter(String id, String name, String email, String password, String role, String employeeId, String department, double salary) {
+        super(id, name, email, password, role, employeeId, department, salary);
+        this.assignedOrders = new ArrayList<>();
     }
 
-    /**
-     * @generated
-     */
-    private List<Order> setAssignedOrders(List<Order> assignedOrders) {
-        this.assignedOrders = assignedOrders;
+    public void viewNewOrders() {
+        // Implementation here
     }
 
+    public void acceptOrder(Order order) {
+        // Implementation here
+    }
 
-    //                          Operations
+    public void markOrderAsDone(Order order) {
+        // Implementation here
+    }
 
 
 }

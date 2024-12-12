@@ -1,95 +1,42 @@
 package projectA;
 
 
-/**
- * @generated
- */
+import java.util.ArrayList;
 public class Employee extends User {
-
-    /**
-     * @generated
-     */
-    private String employeeId;
-
-    /**
-     * @generated
-     */
+    private final String employeeId;
     private String department;
+    private double salary;
 
-    /**
-     * @generated
-     */
-    private Double salary;
-
-
-
-    /**
-     * @generated
-     */
-    private String getEmployeeId() {
-        return this.employeeId;
-    }
-
-    /**
-     * @generated
-     */
-    private String setEmployeeId(String employeeId) {
+    public Employee(String id, String name, String email, String password, String role, String employeeId, String department, double salary) {
+        super(id, name, email, password, role);
         this.employeeId = employeeId;
-    }
-
-    /**
-     * @generated
-     */
-    private String getDepartment() {
-        return this.department;
-    }
-
-    /**
-     * @generated
-     */
-    private String setDepartment(String department) {
         this.department = department;
-    }
-
-    /**
-     * @generated
-     */
-    private Double getSalary() {
-        return this.salary;
-    }
-
-    /**
-     * @generated
-     */
-    private Double setSalary(Double salary) {
         this.salary = salary;
     }
 
-
-    //                          Operations
-
-    /**
-     * @generated
-     */
-    public Employee() {
-        //TODO
-    }
-    /**
-     * @generated
-     */
     public String getDepartment() {
-        //TODO
-        return "";
+        return department;
     }
 
-    /**
-     * @generated
-     */
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
     public double getSalary() {
-        //TODO
-        return 0.0;
+        return salary;
     }
 
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public List<Task> viewAssignedTasks() {
+        // Implementation here
+        return new ArrayList<>();
+    }
+
+    public void sendMessage(Employee receiver, String content) {
+        // Implementation here
+    }
 
 }
-

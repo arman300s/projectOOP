@@ -1,184 +1,94 @@
 package projectA;
 
 
+import java.util.ArrayList;
 import java.util.List;
-
-/**
- * @generated
- */
 public class System {
-
-    /**
-     * @generated
-     */
-    private List<User> users;
-
-    /**
-     * @generated
-     */
-    private List<Course> courses;
-
-    /**
-     * @generated
-     */
-    private List<ResearchPaper> researchPapers;
-
-    /**
-     * @generated
-     */
-    private List<News> newsFeed;
-
-    /**
-     * @generated
-     */
-    private Language defaultLanguage;
-
-    /**
-     * @generated
-     */
-    private List<Order> teachSupportOrders;
-
-
-    /**
-     * @generated
-     */
-    private Course course;
-
-    /**
-     * @generated
-     */
-    private User user;
-
-    /**
-     * @generated
-     */
-    private Order order;
-
-    /**
-     * @generated
-     */
     private ResearchPaper researchPaper;
+    private List<User> users;
+    private List<Employee> employees;
+    private List<Student> students;
+    private List<Teacher> teachers;
+    private List<Course> courses;
+    private List<News> newsList;
+    private List<Message> messages;
+    private List<ResearchProject> researchProjects;
 
-
-    /**
-     * @generated
-     */
-    private List<User> getUsers() {
-        return this.users;
+    public System() {
+        this.users = new ArrayList<>();
+        this.employees = new ArrayList<>();
+        this.students = new ArrayList<>();
+        this.teachers = new ArrayList<>();
+        this.courses = new ArrayList<>();
+        this.newsList = new ArrayList<>();
+        this.messages = new ArrayList<>();
+        this.researchProjects = new ArrayList<>();
     }
 
-    /**
-     * @generated
-     */
-    private List<User> setUsers(List<User> users) {
-        this.users = users;
+    // User management
+    public void addUser(User user) {
+        users.add(user);
     }
 
-    /**
-     * @generated
-     */
-    private List<Course> getCourses() {
-        return this.courses;
+    public void removeUser(User user) {
+        users.remove(user);
     }
 
-    /**
-     * @generated
-     */
-    private List<Course> setCourses(List<Course> courses) {
-        this.courses = courses;
+    public User findUserById(String id) {
+        return users.stream().filter(u -> u.getId().equals(id)).findFirst().orElse(null);
     }
 
-    /**
-     * @generated
-     */
-    private List<ResearchPaper> getResearchPapers() {
-        return this.researchPapers;
+    // Course management
+    public void addCourse(Course course) {
+        courses.add(course);
     }
 
-    /**
-     * @generated
-     */
-    private List<ResearchPaper> setResearchPapers(List<ResearchPaper> researchPapers) {
-        this.researchPapers = researchPapers;
+    public void removeCourse(Course course) {
+        courses.remove(course);
     }
 
-    /**
-     * @generated
-     */
-    private List<News> getNewsFeed() {
-        return this.newsFeed;
-    }
-
-    /**
-     * @generated
-     */
-    private List<News> setNewsFeed(List<News> newsFeed) {
-        this.newsFeed = newsFeed;
-    }
-
-    /**
-     * @generated
-     */
-    private Language getDefaultLanguage() {
-        return this.defaultLanguage;
-    }
-
-    /**
-     * @generated
-     */
-    private Language setDefaultLanguage(Language defaultLanguage) {
-        this.defaultLanguage = defaultLanguage;
-    }
-
-    /**
-     * @generated
-     */
-    private List<Order> getTeachSupportOrders() {
-        return this.teachSupportOrders;
-    }
-
-    /**
-     * @generated
-     */
-    private List<Order> setTeachSupportOrders(List<Order> teachSupportOrders) {
-        this.teachSupportOrders = teachSupportOrders;
-    }
-
-
-    //                          Operations
-
-    /**
-     * @generated
-     */
-    public User findUserByID() {
-        //TODO
-        return null;
-    }
-
-    /**
-     * @generated
-     */
     public List<Course> getCourses() {
-        //TODO
-        return null;
+        return courses;
     }
 
-    /**
-     * @generated
-     */
-    public List<ResearchPaper> getAllResearchPapers() {
-        //TODO
-        return null;
+    // News management
+    public void addNews(News news) {
+        newsList.add(news);
     }
 
-    /**
-     * @generated
-     */
-    public List<News> getPinnedNews() {
-        //TODO
-        return null;
+    public void removeNews(News news) {
+        newsList.remove(news);
     }
 
+    public List<News> getNewsList() {
+        return newsList;
+    }
 
+    // Message management
+    public void sendMessage(Message message) {
+        messages.add(message);
+    }
+
+    public List<Message> getMessages() {
+        return messages;
+    }
+
+    // Research project management
+    public void addResearchProject(ResearchProject project) {
+        researchProjects.add(project);
+    }
+
+    public List<ResearchProject> getResearchProjects() {
+        return researchProjects;
+    }
+
+    // Example of a general method
+    public void displayAllUsers() {
+        users.forEach(user -> System.out.println(user.getName()));
+    }
+
+    public void displayCourses() {
+        courses.forEach(course -> System.out.println(course.getName()));
+    }
 }
 

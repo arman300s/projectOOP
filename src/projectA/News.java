@@ -7,92 +7,27 @@ import java.time.LocalDate;
  * @generated
  */
 public class News {
-
-    /**
-     * @generated
-     */
     private String title;
-
-    /**
-     * @generated
-     */
     private String content;
-
-    /**
-     * @generated
-     */
     private LocalDate datePublished;
-
-    /**
-     * @generated
-     */
     private Boolean isPinned;
-
-
-    /**
-     * @generated
-     */
     private User user;
-
-
-    /**
-     * @generated
-     */
-    private String getTitle() {
-        return this.title;
-    }
-
-    /**
-     * @generated
-     */
-    private String setTitle(String title) {
+    public News(String title, String content, LocalDate datePublished) {
         this.title = title;
-    }
-
-    /**
-     * @generated
-     */
-    private String getContent() {
-        return this.content;
-    }
-
-    /**
-     * @generated
-     */
-    private String setContent(String content) {
         this.content = content;
-    }
-
-    /**
-     * @generated
-     */
-    private LocalDate getDatePublished() {
-        return this.datePublished;
-    }
-
-    /**
-     * @generated
-     */
-    private LocalDate setDatePublished(LocalDate datePublished) {
         this.datePublished = datePublished;
+        this.isPinned = false;
     }
 
-    /**
-     * @generated
-     */
-    private Boolean getIsPinned() {
-        return this.isPinned;
+    public void pinNews() {
+        this.isPinned = true;
     }
 
-    /**
-     * @generated
-     */
-    private Boolean setIsPinned(Boolean isPinned) {
-        this.isPinned = isPinned;
+    public void unpinNews() {
+        this.isPinned = false;
     }
 
-
-    //                          Operations
-
-
+    public void addComment(String comment) {
+        // Implementation for adding comments
+    }
 }

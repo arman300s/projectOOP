@@ -1,88 +1,34 @@
 package projectA;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @generated
  */
-public class Teacher {
-
-    /**
-     * @generated
-     */
+public class Teacher extends Employee {
     private List<Course> courses;
-
-    /**
-     * @generated
-     */
     private TeacherTitle title;
-
-
-    /**
-     * @generated
-     */
     private Course course;
-
-    /**
-     * @generated
-     */
     private Lesson lesson;
-
-    /**
-     * @generated
-     */
     private Student student;
-
-    /**
-     * @generated
-     */
     private Mark mark;
 
-
-    /**
-     * @generated
-     */
-    private List<Course> getCourses() {
-        return this.courses;
-    }
-
-    /**
-     * @generated
-     */
-    private List<Course> setCourses(List<Course> courses) {
-        this.courses = courses;
-    }
-
-    /**
-     * @generated
-     */
-    private TeacherTitle getTitle() {
-        return this.title;
-    }
-
-    /**
-     * @generated
-     */
-    private TeacherTitle setTitle(TeacherTitle title) {
+    public Teacher(String id, String name, String email, String password, String role, String employeeId, String department, double salary, TeacherTitle title) {
+        super(id, name, email, password, role, employeeId, department, salary);
         this.title = title;
+        this.courses = new ArrayList<>();
     }
 
-
-    //                          Operations
-
-    /**
-     * @generated
-     */
-    public Teacher() {
-        //TODO
+    public void assignGrade(Student student, Course course, Mark mark) {
     }
-    /**
-     * @generated
-     */
+
+    public void sendComplaint(Student student, UrgencyLevel urgencyLevel, String message) {
+    }
+
     public List<Course> viewCourses() {
-        //TODO
-        return null;
+        return courses;
     }
 
 

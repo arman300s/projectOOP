@@ -5,119 +5,31 @@ package projectA;
  * @generated
  */
 public class Message {
-
-    /**
-     * @generated
-     */
-    private String messageID;
-
-    /**
-     * @generated
-     */
-    private String senderID;
-
-    /**
-     * @generated
-     */
-    private String receiverID;
-
-    /**
-     * @generated
-     */
+    private final String messageId;
+    private String senderId;
+    private String receiverId;
     private String content;
-
-    /**
-     * @generated
-     */
     private Boolean isRead;
-
-
-    /**
-     * @generated
-     */
     private User user;
 
 
-    /**
-     * @generated
-     */
-    private String getMessageID() {
-        return this.messageID;
-    }
-
-    /**
-     * @generated
-     */
-    private String setMessageID(String messageID) {
-        this.messageID = messageID;
-    }
-
-    /**
-     * @generated
-     */
-    private String getSenderID() {
-        return this.senderID;
-    }
-
-    /**
-     * @generated
-     */
-    private String setSenderID(String senderID) {
-        this.senderID = senderID;
-    }
-
-    /**
-     * @generated
-     */
-    private String getReceiverID() {
-        return this.receiverID;
-    }
-
-    /**
-     * @generated
-     */
-    private String setReceiverID(String receiverID) {
-        this.receiverID = receiverID;
-    }
-
-    /**
-     * @generated
-     */
-    private String getContent() {
-        return this.content;
-    }
-
-    /**
-     * @generated
-     */
-    private String setContent(String content) {
+    public Message(String messageId, String senderId, String receiverId, String content) {
+        this.messageId = messageId;
+        this.senderId = senderId;
+        this.receiverId = receiverId;
         this.content = content;
+        this.isRead = false;
     }
 
-    /**
-     * @generated
-     */
-    private Boolean getIsRead() {
-        return this.isRead;
+    public void markAsRead() {
+        this.isRead = true;
     }
 
-    /**
-     * @generated
-     */
-    private Boolean setIsRead(Boolean isRead) {
-        this.isRead = isRead;
-    }
-
-
-    //                          Operations
-
-    /**
-     * @generated
-     */
     public String getContent() {
-        //TODO
-        return "";
+        return content;
     }
 
-
+    public boolean isRead() {
+        return isRead;
+    }
 }

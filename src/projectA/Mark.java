@@ -1,104 +1,32 @@
 package projectA;
 
 
-/**
- * @generated
- */
+
 public class Mark {
 
-    /**
-     * @generated
-     */
     private Double firstAttestation;
-
-    /**
-     * @generated
-     */
     private Double secondAttestation;
-
-    /**
-     * @generated
-     */
     private Double finalExam;
-
-
-    /**
-     * @generated
-     */
     private Course course;
-
-    /**
-     * @generated
-     */
     private Teacher teacher;
-
-    /**
-     * @generated
-     */
     private Student student;
-
-
-    /**
-     * @generated
-     */
-    private Double getFirstAttestation() {
-        return this.firstAttestation;
-    }
-
-    /**
-     * @generated
-     */
-    private Double setFirstAttestation(Double firstAttestation) {
+    public Mark(double firstAttestation, double secondAttestation, double finalExam) {
         this.firstAttestation = firstAttestation;
-    }
-
-    /**
-     * @generated
-     */
-    private Double getSecondAttestation() {
-        return this.secondAttestation;
-    }
-
-    /**
-     * @generated
-     */
-    private Double setSecondAttestation(Double secondAttestation) {
         this.secondAttestation = secondAttestation;
-    }
-
-    /**
-     * @generated
-     */
-    private Double getFinalExam() {
-        return this.finalExam;
-    }
-
-    /**
-     * @generated
-     */
-    private Double setFinalExam(Double finalExam) {
         this.finalExam = finalExam;
     }
 
-
-    //                          Operations
-
-    /**
-     * @generated
-     */
     public double calculateTotal() {
-        //TODO
-        return 0.0;
+        return firstAttestation * 0.3 + secondAttestation * 0.3 + finalExam * 0.4;
     }
 
-    /**
-     * @generated
-     */
     public String getGrade() {
-        //TODO
-        return "";
+        double total = calculateTotal();
+        if (total >= 90) return "A";
+        if (total >= 80) return "B";
+        if (total >= 70) return "C";
+        if (total >= 60) return "D";
+        return "F";
     }
-
-
 }
 

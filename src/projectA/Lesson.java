@@ -1,103 +1,35 @@
 package projectA;
 
-
-/**
- * @generated
- */
 public class Lesson {
 
-    /**
-     * @generated
-     */
+
     private String lessonType;
-
-    /**
-     * @generated
-     */
     private String topic;
-
-    /**
-     * @generated
-     */
     private Integer durationInMinutes;
-
-
-    /**
-     * @generated
-     */
     private Course course;
-
-    /**
-     * @generated
-     */
     private Teacher teacher;
-
-    /**
-     * @generated
-     */
     private Student student;
 
 
-    /**
-     * @generated
-     */
-    private String getLessonType() {
-        return this.lessonType;
-    }
-
-    /**
-     * @generated
-     */
-    private String setLessonType(String lessonType) {
+    public Lesson(String lessonType, String topic, int durationInMinutes) {
         this.lessonType = lessonType;
-    }
-
-    /**
-     * @generated
-     */
-    private String getTopic() {
-        return this.topic;
-    }
-
-    /**
-     * @generated
-     */
-    private String setTopic(String topic) {
         this.topic = topic;
-    }
-
-    /**
-     * @generated
-     */
-    private Integer getDurationInMinutes() {
-        return this.durationInMinutes;
-    }
-
-    /**
-     * @generated
-     */
-    private Integer setDurationInMinutes(Integer durationInMinutes) {
         this.durationInMinutes = durationInMinutes;
     }
 
-
-    //                          Operations
-
-    /**
-     * @generated
-     */
     public String getLessonType() {
-        //TODO
-        return "";
+        return lessonType;
     }
 
-    /**
-     * @generated
-     */
+    public void setLessonType(String lessonType) {
+        this.lessonType = lessonType;
+    }
+
     public String getTopic() {
-        //TODO
-        return "";
+        return topic;
     }
 
-
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
 }
