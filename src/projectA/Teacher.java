@@ -29,7 +29,9 @@ public class Teacher extends Employee {
     }
 
 
-    public void assignGrade(Student student, Course course, Mark mark) {}
+    public void assignGrade(Student student, Course course, Mark mark) {
+        course.assignGradeToStudent(student, mark); // Call the course method to assign the grade
+    }
 
     public void sendComplaint(Student student, UrgencyLevel urgencyLevel, String message) {
         java.lang.System.out.println("Complaint from Teacher " + getName() + ": \n" +

@@ -18,6 +18,8 @@ public class Course {
     private System system;
     private Mark mark;
     private Student student;
+    private List<Grade> grades;
+
     public Course(String courseId, String name, int credits) {
         this.courseId = courseId;
         this.name = name;
@@ -59,5 +61,25 @@ public class Course {
     public void removeStudent(String studentId) {
         students.removeIf(student -> student.getId().equals(studentId));
     }
+    public Grade getGradeForStudent(Student student) {
+        return grades.stream()
+                .filter(grade -> grade.getStudent().equals(student))
+                .findFirst()
+                .orElse(null);
+}
 
+    public void assignGradeToStudent(Student student, Mark mark) {
+        if (students.contains(student)) {
+            Grade grade = getGradeForStudent(student);
+            if (grade == null) {
+                grade = new Grade(student, mark);
+                grades.add(grade);
+            } else {
+                grade.setMark(mark);
+            }
+            java.lang.System.out.println("Grade for " + student.getName() + " in " + name + " assigned: " + mark);
+        } else {
+            java.lang.System.out.println(student.getName() + " is not enrolled in this course.");
+        }
+    }
 }

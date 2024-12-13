@@ -7,6 +7,7 @@ public class Mark {
     private Double firstAttestation;
     private Double secondAttestation;
     private Double finalExam;
+    private Double value;
     private Course course;
     private Teacher teacher;
     private Student student;
@@ -26,6 +27,13 @@ public class Mark {
     }
     public void setSecondAttestation(double secondAttestation) {
         this.secondAttestation = secondAttestation;
+    }
+    public Mark(double value) {
+        this.value = value;
+    }
+
+    public double getValue() {
+        return value;
     }
 
 
