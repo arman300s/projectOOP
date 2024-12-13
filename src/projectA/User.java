@@ -1,5 +1,5 @@
 package projectA;
-
+import java.util.Scanner;
 public class User {
 
     private String id;
@@ -19,6 +19,13 @@ public class User {
         this.role = role;
     }
 
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -34,19 +41,72 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public String getRole() {
+        return role;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
+    public News getNews() {
+        return news;
+    }
+    public void setNews(News news) {
+        this.news = news;
+    }
 
     public boolean login() {
-        // Implementation here
-        return true;
+        Scanner scanner = new Scanner(java.lang.System.in);
+
+        java.lang.System.out.print("Enter email: ");
+        String inputEmail = scanner.nextLine();
+
+        java.lang.System.out.print("Enter password: ");
+        String inputPassword = scanner.nextLine();
+
+        if (this.email.equals(inputEmail) && this.password.equals(inputPassword)) {
+            java.lang.System.out.println("Login successful! Welcome, " + name);
+            return true;
+        } else {
+            java.lang.System.out.println("Login failed! Invalid email or password.");
+            return false;
+        }
     }
 
     public void logout() {
-        // Implementation here
+        java.lang.System.out.println("User " + name + " has been logged out.");
     }
 
     public void updateProfile() {
-        // Implementation here
+        Scanner scanner = new Scanner(java.lang.System.in);
+
+        java.lang.System.out.print("Enter new name (leave blank to keep current): ");
+        String newName = scanner.nextLine();
+        if (!newName.isEmpty()) {
+            this.name = newName;
+        }
+
+        java.lang.System.out.print("Enter new email (leave blank to keep current): ");
+        String newEmail = scanner.nextLine();
+        if (!newEmail.isEmpty()) {
+            this.email = newEmail;
+        }
+
+        java.lang.System.out.print("Enter new password (leave blank to keep current): ");
+        String newPassword = scanner.nextLine();
+        if (!newPassword.isEmpty()) {
+            this.password = newPassword;
+        }
+
+        java.lang.System.out.println("Profile updated successfully!");
     }
+
+
 
 
 }

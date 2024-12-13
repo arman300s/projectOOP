@@ -14,6 +14,18 @@ public class Employee extends User {
         this.salary = salary;
     }
 
+    public String getName(){
+        return super.getName();
+    }
+    public String getEmail(){
+        return super.getEmail();
+    }
+
+    public String getEmployeeId() {
+        return employeeId;
+    }
+
+
     public String getDepartment() {
         return department;
     }
@@ -30,13 +42,16 @@ public class Employee extends User {
         this.salary = salary;
     }
 
-    public List<Task> viewAssignedTasks() {
-        // Implementation here
-        return new ArrayList<>();
-    }
 
     public void sendMessage(Employee receiver, String content) {
-        // Implementation here
+        if (receiver == null || content == null || content.isEmpty()) {
+            java.lang.System.out.println("Error: Invalid receiver or message content.");
+            return;
+        }
+
+        java.lang.System.out.println("Message sent from " + this.getName() + " to " + receiver.getName());
+        java.lang.System.out.println("Content: " + content);
     }
+
 
 }

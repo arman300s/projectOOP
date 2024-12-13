@@ -4,13 +4,10 @@ package projectA;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @generated
- */
 public class ResearchProject {
     private String topic;
     private List<ResearchPaper> publishedPapers;
-    private List<Reseacrher> participants;
+    private List<Researcher> participants;
     private Researcher researcher;
     private ResearchPaper researchPaper;
 

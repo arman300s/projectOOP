@@ -1,9 +1,5 @@
 package projectA;
 
-
-/**
- * @generated
- */
 public class Message {
     private final String messageId;
     private String senderId;

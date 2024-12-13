@@ -13,6 +13,7 @@ public class System {
     private List<News> newsList;
     private List<Message> messages;
     private List<ResearchProject> researchProjects;
+    private Language language;
 
     public System() {
         this.users = new ArrayList<>();
@@ -26,7 +27,7 @@ public class System {
     }
 
     // User management
-    public void addUser(User user) {
+    public void registerUser(User user) {
         users.add(user);
     }
 
@@ -38,7 +39,6 @@ public class System {
         return users.stream().filter(u -> u.getId().equals(id)).findFirst().orElse(null);
     }
 
-    // Course management
     public void addCourse(Course course) {
         courses.add(course);
     }
@@ -51,7 +51,6 @@ public class System {
         return courses;
     }
 
-    // News management
     public void addNews(News news) {
         newsList.add(news);
     }
@@ -64,7 +63,6 @@ public class System {
         return newsList;
     }
 
-    // Message management
     public void sendMessage(Message message) {
         messages.add(message);
     }
@@ -73,7 +71,6 @@ public class System {
         return messages;
     }
 
-    // Research project management
     public void addResearchProject(ResearchProject project) {
         researchProjects.add(project);
     }
@@ -82,13 +79,24 @@ public class System {
         return researchProjects;
     }
 
-    // Example of a general method
     public void displayAllUsers() {
-        users.forEach(user -> System.out.println(user.getName()));
+        users.forEach(user -> java.lang.System.out.println(user.getName()));
     }
 
     public void displayCourses() {
-        courses.forEach(course -> System.out.println(course.getName()));
+        courses.forEach(course -> java.lang.System.out.println(course.getName()));
+    }
+
+    public void setDefaultLanguage(Language language) {
+        this.language = language;
+        java.lang.System.out.println("Default language set to: " + language);
+    }
+
+    public void manageTechSupportOrder(Order order, TechSupporter supporter) {
+        if ("Resolved".equals(order.getStatus())) {
+            java.lang.System.out.println("This order is already resolved.");
+            return;
+        }
     }
 }
 

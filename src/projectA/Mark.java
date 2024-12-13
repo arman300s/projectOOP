@@ -15,9 +15,22 @@ public class Mark {
         this.secondAttestation = secondAttestation;
         this.finalExam = finalExam;
     }
+    public double getFirstAttestation() {
+        return firstAttestation;
+    }
+    public void setFirstAttestation(double firstAttestation) {
+        this.firstAttestation = firstAttestation;
+    }
+    public double getSecondAttestation() {
+        return secondAttestation;
+    }
+    public void setSecondAttestation(double secondAttestation) {
+        this.secondAttestation = secondAttestation;
+    }
+
 
     public double calculateTotal() {
-        return firstAttestation * 0.3 + secondAttestation * 0.3 + finalExam * 0.4;
+        return firstAttestation  + secondAttestation  + finalExam * 0.4;
     }
 
     public String getGrade() {

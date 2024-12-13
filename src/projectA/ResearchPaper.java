@@ -23,12 +23,58 @@ public class ResearchPaper {
         this.publicationDate = publicationDate;
     }
 
-    public String getCitation(String format) {
-        if ("Plain Text".equalsIgnoreCase(format)) {
-            return authors + ". " + title + ". " + journal + ", " + publicationDate.getYear() + ".";
-        } else if ("BibTeX".equalsIgnoreCase(format)) {
-            return "@article{" + doi + ",\n  title={" + title + "},\n  author={" + authors + "},\n  journal={" + journal + "},\n  year={" + publicationDate.getYear() + "}\n}";
-        }
-        return "Invalid format";
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getAuthors() {
+        return authors;
+    }
+    public void setAuthors(String authors) {
+        this.authors = authors;
+    }
+    public Integer getCitations() {
+        return citations;
+    }
+    public void setCitations(Integer citations) {
+        this.citations = citations;
+    }
+    public Integer getPages() {
+        return pages;
+    }
+    public void setPages(Integer pages) {
+        this.pages = pages;
+    }
+    public String getDoi() {
+        return doi;
+    }
+    public void setDoi(String doi) {
+        this.doi = doi;
+    }
+    public String getJournal() {
+        return journal;
+    }
+    public void setJournal(String journal) {
+        this.journal = journal;
+    }
+    public LocalDate getPublicationDate() {
+        return publicationDate;
+    }
+    public void setPublicationDate(LocalDate publicationDate) {
+        this.publicationDate = publicationDate;
+    }
+    public Researcher getResearcher() {
+        return researcher;
+    }
+    public void setResearcher(Researcher researcher) {
+        this.researcher = researcher;
+    }
+    public ResearchProject getResearchProject() {
+        return researchProject;
+    }
+    public void setResearchProject(ResearchProject researchProject) {
+        this.researchProject = researchProject;
     }
 }
