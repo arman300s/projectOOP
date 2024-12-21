@@ -8,8 +8,6 @@ public class User {
     private String password;
     private String role;
     private News news;
-    private System system;
-    private Message message;
 
     public User(String id, String name, String email, String password, String role) {
         this.id = id;
@@ -106,6 +104,30 @@ public class User {
         java.lang.System.out.println("Profile updated successfully!");
     }
 
+
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", role='" + role + '\'' +
+                '}';
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        User user = (User) obj;
+        return id.equals(user.id);
+    }
+
+    public int hashCode() {
+        return id.hashCode();
+    }
 
 
 

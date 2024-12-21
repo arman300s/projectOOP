@@ -6,7 +6,6 @@ public class Message {
     private String receiverId;
     private String content;
     private Boolean isRead;
-    private User user;
 
 
     public Message(String messageId, String senderId, String receiverId, String content) {

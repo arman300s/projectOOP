@@ -4,7 +4,6 @@ package projectA;
 import java.time.LocalDate;
 public class ResearchPaper {
     private String title;
-    private String authors;
     private Integer citations;
     private Integer pages;
     private String doi;
@@ -15,7 +14,6 @@ public class ResearchPaper {
 
     public ResearchPaper(String title, String authors, int citations, int pages, String journal, String doi, LocalDate publicationDate) {
         this.title = title;
-        this.authors = authors;
         this.citations = citations;
         this.pages = pages;
         this.journal = journal;
@@ -29,13 +27,7 @@ public class ResearchPaper {
     public void setTitle(String title) {
         this.title = title;
     }
-    public String getAuthors() {
-        return authors;
-    }
-    public void setAuthors(String authors) {
-        this.authors = authors;
-    }
-    public Integer getCitations() {
+    public Integer getCitations(Format format) {
         return citations;
     }
     public void setCitations(Integer citations) {

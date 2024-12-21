@@ -8,9 +8,6 @@ public class Mark {
     private Double secondAttestation;
     private Double finalExam;
     private Double value;
-    private Course course;
-    private Teacher teacher;
-    private Student student;
     public Mark(double firstAttestation, double secondAttestation, double finalExam) {
         this.firstAttestation = firstAttestation;
         this.secondAttestation = secondAttestation;

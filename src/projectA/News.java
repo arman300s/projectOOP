@@ -8,7 +8,6 @@ public class News {
     private String content;
     private LocalDate datePublished;
     private Boolean isPinned;
-    private User user;
     public News(String title, String content, LocalDate datePublished) {
         this.title = title;
         this.content = content;

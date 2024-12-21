@@ -8,7 +8,6 @@ import java.util.Comparator;
 
 public class Manager extends Employee {
     private ManagerType managerType;
-    private Course course;
     private List<String> responsibilities;
     public Manager(String id, String name, String email, String password, String role, String employeeId, String department, double salary, List<String> responsibilities) {
         super(id, name, email, password, role, employeeId, department, salary);

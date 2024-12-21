@@ -10,8 +10,6 @@ public class Order {
     private LocalDate dateCompleted;
     private TechSupporter assignedTo;
     private TechSupporter techSupporter;
-    private System system;
-
 
     public Order(String orderId, String description, String status) {
         this.orderId = orderId;

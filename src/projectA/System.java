@@ -26,14 +26,6 @@ public class System {
         this.researchProjects = new ArrayList<>();
     }
 
-    // User management
-    public void registerUser(User user) {
-        users.add(user);
-    }
-
-    public void removeUser(User user) {
-        users.remove(user);
-    }
 
     public User findUserById(String id) {
         return users.stream().filter(u -> u.getId().equals(id)).findFirst().orElse(null);

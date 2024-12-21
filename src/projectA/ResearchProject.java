@@ -8,8 +8,6 @@ public class ResearchProject {
     private String topic;
     private List<ResearchPaper> publishedPapers;
     private List<Researcher> participants;
-    private Researcher researcher;
-    private ResearchPaper researchPaper;
 
     public ResearchProject(String topic) {
         this.topic = topic;

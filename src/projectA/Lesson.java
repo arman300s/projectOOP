@@ -6,9 +6,7 @@ public class Lesson {
     private String lessonType;
     private String topic;
     private Integer durationInMinutes;
-    private Course course;
-    private Teacher teacher;
-    private Student student;
+
 
 
     public Lesson(String lessonType, String topic, int durationInMinutes) {
